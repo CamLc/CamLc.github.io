@@ -8,6 +8,7 @@ let listaProductos = document.querySelector("#listaProductos");
                 //console.log(productosObtenidos);
                 productos = productosObtenidos.slice();
                 productos.forEach( (producto,indice) => {
+                    //console.log("producto:",indice, producto);
                     producto.category = producto.category.replace("'", '');
                 });
                 muestraProductos('');
@@ -23,6 +24,7 @@ let listaProductos = document.querySelector("#listaProductos");
     };
  
     let muestraProductos = (categoria) => {
+        //console.log("muestraProductos:", productos);
         productosMostrar = productos.slice();
         if(categoria != "")
             productosMostrar = productos.filter(producto =>
